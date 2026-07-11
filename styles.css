@@ -242,7 +242,8 @@ html[lang="zh-CN"] .contact-copy h2 { font-size:clamp(34px,4.2vw,56px); line-hei
   .profile-notes strong { font-size:15px; line-height:1.8; }
   .trend-heading { display:grid; gap:12px; }.trend-heading p { font-size:14px; }
   .trend-layout { grid-template-columns:1fr; gap:20px; }
-  .trend-chart { overflow-x:auto; }.trend-chart svg { min-width:680px; }
+  .capability-trend,.trend-layout,.trend-chart { min-width:0; max-width:100%; }
+  .trend-chart { overflow:hidden; }.trend-chart svg { width:100%; min-width:0; }
   .trend-legend { flex-wrap:wrap; }.journey-intro { margin:48px 0 0; font-size:17px; line-height:1.85; }
   html[lang="zh-CN"] .hero h1 { font-size:clamp(40px,11vw,64px); }
   html[lang="zh-CN"] .hero-description { font-size:15px; line-height:1.85; }
