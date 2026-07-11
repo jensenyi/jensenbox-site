@@ -92,6 +92,7 @@ button { font:inherit; color:inherit; }
 .timeline-item { display:grid; grid-template-columns:65px 1fr; gap:32px; border-left:1px solid rgba(16,17,15,.35); padding:0 0 70px 32px; position:relative; }
 .timeline-item:before { content:''; position:absolute; left:-5px; top:0; width:9px; height:9px; background:var(--accent); }
 .timeline-item > span { font:11px var(--mono); color:var(--accent); }
+.timeline-item > span { white-space:nowrap; line-height:1.35; }
 .timeline-item h3 { font-size:clamp(27px,3vw,40px); letter-spacing:0; line-height:1.08; margin:15px 0; }
 .timeline-item p { max-width:480px; margin:0; color:#484944; }
 .principles-section { display:grid; grid-template-columns:1.3fr .7fr; gap:8vw; padding:150px 8vw; }
@@ -177,6 +178,7 @@ html[lang="zh-CN"] .hero-description,html[lang="zh-CN"] .system-main p:not(.tag)
 .trend-heading { display:flex; justify-content:space-between; gap:36px; align-items:baseline; }
 .trend-heading > span { color:var(--accent); font:11px var(--mono); letter-spacing:.06em; }
 .trend-heading p { max-width:480px; margin:0; color:#5f5a52; font-size:14px; line-height:1.7; }
+.trend-layout { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr); gap:5vw; align-items:start; }
 .trend-chart { margin-top:24px; padding:18px 0 0; border-bottom:1px solid rgba(16,17,15,.25); }
 .trend-chart svg { display:block; width:100%; height:auto; overflow:visible; }
 .chart-axis { stroke:rgba(16,17,15,.28); stroke-width:1; }
@@ -186,6 +188,11 @@ html[lang="zh-CN"] .hero-description,html[lang="zh-CN"] .system-main p:not(.tag)
 .trend-legend { display:flex; gap:24px; padding:16px 0 22px; color:#5f5a52; font-size:13px; }
 .trend-legend span { display:flex; align-items:center; gap:8px; }
 .trend-legend i { width:22px; height:4px; display:block; border-radius:99px; }.legend-brand{background:#df6738}.legend-content{background:#1b6aa8}.legend-ai{background:#7a5a9f}
+.ability-atlas { margin-top:24px; border-top:1px solid rgba(16,17,15,.35); }
+.atlas-title { padding:17px 0 14px; color:var(--accent); font:11px var(--mono); letter-spacing:.06em; }
+.atlas-item { display:grid; gap:7px; padding:17px 0; border-bottom:1px solid rgba(16,17,15,.25); }
+.atlas-item strong { font-size:16px; line-height:1.35; }
+.atlas-item span { color:#5f5a52; font-size:13px; line-height:1.6; }
 .journey-intro { max-width:620px; margin:62px 0 0 11%; color:#4d4a43; font-size:18px; line-height:1.8; }
 html[lang="zh-CN"] body { font-family:"Noto Sans SC","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif; line-height:1.78; }
 html[lang="zh-CN"] .desktop-nav,html[lang="zh-CN"] .header-actions button,html[lang="zh-CN"] .mobile-menu,html[lang="zh-CN"] .eyebrow,html[lang="zh-CN"] .tag,html[lang="zh-CN"] .section-index,html[lang="zh-CN"] .system-number,html[lang="zh-CN"] small,html[lang="zh-CN"] .media-label,html[lang="zh-CN"] .mission-status,html[lang="zh-CN"] .hero-meta,html[lang="zh-CN"] .site-footer,html[lang="zh-CN"] .row-link,html[lang="zh-CN"] .contact-links a { font-family:"Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif; letter-spacing:.02em; }
@@ -215,6 +222,7 @@ html[lang="zh-CN"] .contact-copy h2 { font-size:clamp(34px,4.2vw,56px); line-hei
   .data-header { display:none; }
   .profile-notes strong { font-size:15px; line-height:1.8; }
   .trend-heading { display:grid; gap:12px; }.trend-heading p { font-size:14px; }
+  .trend-layout { grid-template-columns:1fr; gap:20px; }
   .trend-chart { overflow-x:auto; }.trend-chart svg { min-width:680px; }
   .trend-legend { flex-wrap:wrap; }.journey-intro { margin:48px 0 0; font-size:17px; line-height:1.85; }
   html[lang="zh-CN"] .hero h1 { font-size:clamp(40px,11vw,64px); }
