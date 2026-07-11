@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-:root { --ink:#10110f; --paper:#e9e4d9; --warm:#d8d0c1; --white:#f4f1e9; --line:rgba(244,241,233,.22); --accent:#e26835; --muted:#9e9b94; --sans:Manrope,Inter,"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; --mono:'DM Mono',monospace; }
+:root { --ink:#10110f; --paper:#e9e4d9; --warm:#d8d0c1; --white:#f4f1e9; --line:rgba(244,241,233,.22); --accent:#e26835; --muted:#9e9b94; --page-gutter:clamp(28px,8vw,116px); --sans:Manrope,Inter,"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; --mono:'DM Mono',monospace; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; background:var(--ink); }
 body { margin:0; color:var(--ink); background:var(--paper); font-family:var(--sans); font-size:16px; line-height:1.62; }
@@ -20,6 +20,8 @@ main > #journey { order:8; }
 main > #principles { order:9; }
 main > #contact { order:10; }
 section[id] { scroll-margin-top:94px; }
+.site-header,.hero,.section,.results-section,.evidence-section,.principles-section,.contact-section { padding-left:var(--page-gutter); padding-right:var(--page-gutter); }
+.hero-meta { left:var(--page-gutter); right:var(--page-gutter); }
 .site-header { position:fixed; z-index:10; top:0; left:0; right:0; height:78px; padding:0 4vw; display:flex; align-items:center; justify-content:space-between; color:var(--white); mix-blend-mode:normal; border-bottom:1px solid transparent; transition:.3s ease; }
 .site-header.scrolled { background:rgba(16,17,15,.94); border-color:var(--line); }
 .wordmark { font-weight:800; letter-spacing:.09em; font-size:13px; }
@@ -125,6 +127,7 @@ html[lang="zh-CN"] .eyebrow,html[lang="zh-CN"] .tag,html[lang="zh-CN"] .section-
 html[lang="zh-CN"] .hero-description,html[lang="zh-CN"] .system-main p:not(.tag),html[lang="zh-CN"] .capability-grid p,html[lang="zh-CN"] .timeline-item p,html[lang="zh-CN"] .contact-copy > p:last-child { line-height:1.8; }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important; transition:none!important; } .reveal { opacity:1; transform:none; } }
 @media (max-width:850px) {
+  :root { --page-gutter:clamp(20px,6vw,40px); }
   .desktop-nav,.lang-toggle { display:none; }
   .menu-toggle { display:block; color:var(--white); }
   .section,.results-section { padding:95px 6vw; }
@@ -157,6 +160,10 @@ html[lang="zh-CN"] .hero-description,html[lang="zh-CN"] .system-main p:not(.tag)
   .principle-statement h2 { font-size:clamp(46px,13vw,82px); }
   .site-footer { flex-wrap:wrap; padding:20px 6vw; }
 }
+
+/* Keep every section on the same visual grid after responsive overrides. */
+.site-header,.hero,.section,.results-section,.evidence-section,.principles-section,.contact-section { padding-left:var(--page-gutter); padding-right:var(--page-gutter); }
+.hero-meta { left:var(--page-gutter); right:var(--page-gutter); }
 
 /* Chinese typesetting and review layout */
 .about-section { padding-top: 118px; padding-bottom: 118px; }
