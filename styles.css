@@ -8,6 +8,18 @@ html[lang="zh-CN"] body { font-family:"Noto Sans SC","Microsoft YaHei",Manrope,I
 a { color:inherit; text-decoration:none; }
 button { font:inherit; color:inherit; }
 .site-shell { overflow:hidden; }
+main { display:flex; flex-direction:column; }
+main > .hero { order:1; }
+main > #work { order:2; }
+main > #results { order:3; }
+main > .capabilities-section { order:4; }
+main > #about { order:5; }
+main > #systems { order:6; }
+main > .evidence-section { order:7; }
+main > #journey { order:8; }
+main > #principles { order:9; }
+main > #contact { order:10; }
+section[id] { scroll-margin-top:94px; }
 .site-header { position:fixed; z-index:10; top:0; left:0; right:0; height:78px; padding:0 4vw; display:flex; align-items:center; justify-content:space-between; color:var(--white); mix-blend-mode:normal; border-bottom:1px solid transparent; transition:.3s ease; }
 .site-header.scrolled { background:rgba(16,17,15,.94); border-color:var(--line); }
 .wordmark { font-weight:800; letter-spacing:.09em; font-size:13px; }
@@ -152,7 +164,7 @@ html[lang="zh-CN"] .hero-description,html[lang="zh-CN"] .system-main p:not(.tag)
 .results-intro { display:flex; justify-content:space-between; align-items:flex-end; gap:40px; margin:68px 0 46px; }
 .results-intro p { max-width:620px; margin:0; color:#c9c7be; font-size:18px; line-height:1.8; }
 .results-intro > span { flex:none; color:var(--accent); font:11px var(--mono); letter-spacing:.05em; }
-.metric-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--line); margin-bottom:54px; }
+.metric-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); margin-bottom:54px; }
 .metric-grid div { min-height:155px; display:grid; align-content:space-between; gap:18px; padding:22px; background:var(--ink); }
 .metric-grid strong { color:var(--white); font-size:clamp(27px,3vw,44px); line-height:1; }
 .metric-grid span { color:#bcbab2; font-size:13px; line-height:1.6; }
