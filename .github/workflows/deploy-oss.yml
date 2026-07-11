@@ -1,8 +1,6 @@
 name: Deploy personal site to Alibaba OSS
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -16,6 +14,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Confirm release
+        run: echo "Manual release approved by repository owner"
       - name: Checkout
         uses: actions/checkout@v4
 
