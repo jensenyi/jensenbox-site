@@ -1,6 +1,6 @@
 # 发布前检查
 
-1. 在本地运行 `npm run preview`。
+1. Windows 可运行 `preview.ps1`；有 Node.js 时也可运行 `npm run preview`。
 2. 打开 `http://127.0.0.1:4176`，检查中文、英文、移动端和所有链接。
 3. 由大川确认内容和排版。
 4. GitHub 仓库打开 `Actions`。
