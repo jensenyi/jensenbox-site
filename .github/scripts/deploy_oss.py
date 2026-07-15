@@ -24,7 +24,10 @@ files = [
 for path in files:
     key = path.relative_to(root).as_posix()
     content_type = mimetypes.guess_type(key)[0] or "application/octet-stream"
-    headers = {"Content-Type": content_type}
+    headers = {
+        "Content-Type": content_type,
+        "Cache-Control": "no-cache, max-age=0, must-revalidate",
+    }
     bucket.put_object_from_file(key, str(path), headers=headers)
     print(f"uploaded {key}")
 
