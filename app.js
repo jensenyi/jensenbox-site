@@ -2,7 +2,7 @@ const header = document.querySelector('.site-header');
 const menuToggle = document.querySelector('#menuToggle');
 const mobileMenu = document.querySelector('#mobileMenu');
 const langToggle = document.querySelector('#langToggle');
-let language = 'en';
+let language = navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en';
 
 function updateHeader() { header.classList.toggle('scrolled', window.scrollY > 30); }
 
@@ -33,3 +33,4 @@ const observer = new IntersectionObserver((entries) => entries.forEach((entry) =
 document.querySelectorAll('.reveal').forEach((node) => observer.observe(node));
 window.addEventListener('scroll', updateHeader, { passive: true });
 updateHeader();
+updateLanguage();
