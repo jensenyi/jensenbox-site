@@ -1,6 +1,9 @@
 name: Deploy personal site to Alibaba OSS
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
